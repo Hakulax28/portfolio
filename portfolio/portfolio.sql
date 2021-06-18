@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 17 jun 2021 om 20:55
+-- Gegenereerd op: 18 jun 2021 om 09:55
 -- Serverversie: 10.4.17-MariaDB
 -- PHP-versie: 8.0.1
 
@@ -37,6 +37,23 @@ CREATE TABLE `contact` (
   `bericht` varchar(512) CHARACTER SET utf8mb4 DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Gegevens worden geëxporteerd voor tabel `contact`
+--
+
+INSERT INTO `contact` (`ID`, `naam`, `email`, `company`, `telefoon`, `subject`, `bericht`) VALUES
+(1, 'Koning', 'kos.hu@webmail.nl', 'Apple', '058662341', 'Koning', 'hier is koning'),
+(2, 'Koning', 'kos.nu@webmail.nl', 'Micro', '03842413', 'koning', 'hier is koning'),
+(3, 'Cho', 'cho.lommerse@ziggo.nl', 'Nova College', '06475689', 'Koning', 'hier is koning'),
+(4, 'Cho', 'cho.lommerse@ziggo.nl', 'Nova College', '06475689', 'Koning', 'hier is koning'),
+(5, 'Koning', 'sda.lii@er', 'Apple', '0647568', 'Koning', 'mijn koning'),
+(6, 'Koning', 'sda.lii@er', 'Apple', '0647568', 'Koning', 'mijn koning'),
+(7, 'Koning', 'sda.lii@er', 'Apple', '0647568', 'Koning', 'mijn koning'),
+(8, 'Koning', 'sda.lii@er', 'Apple', '0647568', 'Koning', 'mijn koning'),
+(9, 'Koning', 'sda.lii@er', 'Apple', '0647568', 'Koning', 'mijn koning'),
+(10, 'Koning', 'sda.lii@er', 'Apple', '0647568', 'Koning', 'mijn koning'),
+(11, 'Koning', 'sda.lii@er', 'Apple', '0647568', 'Koning', 'mijn koning');
+
 -- --------------------------------------------------------
 
 --
@@ -69,7 +86,7 @@ INSERT INTO `projecten` (`ID`, `projecten`, `omschrijving`, `pstartdate`, `peind
 CREATE TABLE `skills` (
   `ID` int(11) NOT NULL,
   `skills` varchar(256) NOT NULL,
-  `value` varchar(100) NOT NULL
+  `value` varchar(512) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -81,7 +98,8 @@ INSERT INTO `skills` (`ID`, `skills`, `value`) VALUES
 (2, 'css', '60 %'),
 (3, 'javascript', '80 %'),
 (4, 'php', '50 %'),
-(5, 'mysql', '70 %');
+(5, 'mysql', '70 %'),
+(6, 'c#', '90 %');
 
 -- --------------------------------------------------------
 
@@ -95,7 +113,7 @@ CREATE TABLE `werkervaring` (
   `omschrijving` varchar(512) NOT NULL,
   `werkvan` date NOT NULL,
   `werktot` date NOT NULL,
-  `foto` blob NOT NULL
+  `foto` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -143,7 +161,7 @@ ALTER TABLE `werkervaring`
 -- AUTO_INCREMENT voor een tabel `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
